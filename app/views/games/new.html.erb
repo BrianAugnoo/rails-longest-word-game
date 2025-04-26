@@ -1,0 +1,18 @@
+<% card_classe = "border text-bg-primary col-1 m-2 text-center d-flex justify-content-center align-items-center shadow" %>
+
+<div class= "container  p-5">
+  <h1>New Games</h1>
+  <div class="row row-cols-10">
+    <% @chars.each do |char| %>
+      <div class="<%= card_classe %>"  style="aspect-ratio: 1 / 1;"><h1><%= char %></h1></div>
+    <% end  %>
+  </div>
+
+  <form action="/score" method="post" data-turbo="false" class="mt-4">
+    <div class="d-flex">
+      <input type="text" name="response" class="form-control w-50">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <input type="submit" value="play" class="px-3">
+    </div>
+  </form>
+</div>

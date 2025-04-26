@@ -1,0 +1,7 @@
+body {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement */
+  height: 100vh;           /* prend toute la hauteur de la fenêtre */
+  margin: 0;
+}
